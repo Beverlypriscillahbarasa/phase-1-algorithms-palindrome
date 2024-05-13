@@ -1,5 +1,13 @@
 function isPalindrome(word) {
   // Write your algorithm here
+
+  for (let i = 0; i < word.length / 2; i++) {
+    // Check if characters at positions i and (str.length - 1 - i) are equal
+    if (word[i] !== word[word.length - 1 - i]) {
+      return false; // If not equal, it's not a palindrome
+    }
+  }
+  return true; // If the loop completes, it's a palindrome
 }
 
 /* 
